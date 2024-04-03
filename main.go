@@ -91,6 +91,7 @@ func main() {
 			config.Rules = rules
 		}
 	}
+	fmt.Println("registry=" + registry + ", registryNs=" + registryNamespace + ", registryUser=" + registryUserName + ", gitUser=" + ghUser + ", gitRepo=" + ghRepo)
 
 	ts := oauth2.StaticTokenSource(
 		&oauth2.Token{AccessToken: config.GhToken},
