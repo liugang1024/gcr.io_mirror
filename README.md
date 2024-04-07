@@ -36,7 +36,7 @@ chmod +x pull-k8s-image.sh
 
 Uses/如何拉取新镜像
 -------
-[创建issues(直接套用模板即可，别自己瞎改labels)](https://github.com/anjia0532/gcr.io_mirror/issues/new?assignees=&labels=porter&template=porter.md&title=%5BPORTER%5D) ,将自动触发 github actions 进行拉取转推到docker hub
+[创建issues(直接套用模板即可，别自己瞎改labels)](https://github.com/liugang2012/gcr.io_mirror/issues/new?assignees=&labels=porter&template=porter.md&title=%5BPORTER%5D) ,将自动触发 github actions 进行拉取转推到docker hub
 
 **注意：**
 
@@ -54,7 +54,7 @@ Uses/如何拉取新镜像
 
 issues的内容无所谓，可以为空
 
-可以参考 [已搬运镜像集锦](https://github.com/anjia0532/gcr.io_mirror/issues?q=is%3Aissue+label%3Aporter+)
+可以参考 [已搬运镜像集锦](https://github.com/liugang2012/gcr.io_mirror/issues?q=is%3Aissue+label%3Aporter+)
 
 **注意:**
 
@@ -68,6 +68,8 @@ Fork/分叉代码自行维护
 - 可选: 修改 [./rules.yaml](./rules.yaml) 增加暂未支持的镜像库
 - 在 [./settings/actions](../../settings/actions) 的 `Workflow permissions` 选项中，授予读写权限
 - 在 [./settings/secrets/actions](../../settings/secrets/actions) 创建自己的参数
+- 在 [./settings](../../settings) 启用issues
+- 在 [./issues/labels](../../issues/labels) 创建porter标签
 
 `DOCKER_REGISTRY`: 如果推到 docker hub 为空即可
 
