@@ -205,6 +205,7 @@ func mirrorByIssues(issues *github.Issue, config *Config) (err error, originImag
 	names := strings.Split(originImageName, "|")
 
 	originImageName = names[0]
+	platform = "amd64"
 	if len(names) > 1 {
 		platform = names[1]
 	}
@@ -238,6 +239,7 @@ func mirrorByIssues(issues *github.Issue, config *Config) (err error, originImag
 	if len(config.Registry) > 0 {
 		targetImageName = config.Registry + "/" + targetImageName
 	}
+	targetImageName = targetImageName + "-" + platform
 	fmt.Println("source:", originImageName, " , target:", targetImageName)
 
 	//execCmd("docker", "login", config.Registry, "-u", config.RegistryUserName, "-p", config.RegistryPassword)
